@@ -14,7 +14,150 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      daily_progress: {
+        Row: {
+          created_at: string | null
+          id: string
+          progress_date: string | null
+          total_calories: number | null
+          total_carbs: number | null
+          total_fats: number | null
+          total_protein: number | null
+          updated_at: string | null
+          user_id: string
+          water_glasses: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          progress_date?: string | null
+          total_calories?: number | null
+          total_carbs?: number | null
+          total_fats?: number | null
+          total_protein?: number | null
+          updated_at?: string | null
+          user_id: string
+          water_glasses?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          progress_date?: string | null
+          total_calories?: number | null
+          total_carbs?: number | null
+          total_fats?: number | null
+          total_protein?: number | null
+          updated_at?: string | null
+          user_id?: string
+          water_glasses?: number | null
+        }
+        Relationships: []
+      }
+      meals: {
+        Row: {
+          calories: number
+          carbs: number | null
+          created_at: string | null
+          fats: number | null
+          id: string
+          meal_date: string | null
+          meal_type: string
+          name: string
+          protein: number | null
+          user_id: string
+        }
+        Insert: {
+          calories: number
+          carbs?: number | null
+          created_at?: string | null
+          fats?: number | null
+          id?: string
+          meal_date?: string | null
+          meal_type: string
+          name: string
+          protein?: number | null
+          user_id: string
+        }
+        Update: {
+          calories?: number
+          carbs?: number | null
+          created_at?: string | null
+          fats?: number | null
+          id?: string
+          meal_date?: string | null
+          meal_type?: string
+          name?: string
+          protein?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          activity_level: string | null
+          age: number | null
+          created_at: string | null
+          daily_calorie_target: number | null
+          full_name: string | null
+          goal: string | null
+          height: number | null
+          id: string
+          updated_at: string | null
+          user_id: string
+          weight: number | null
+        }
+        Insert: {
+          activity_level?: string | null
+          age?: number | null
+          created_at?: string | null
+          daily_calorie_target?: number | null
+          full_name?: string | null
+          goal?: string | null
+          height?: number | null
+          id?: string
+          updated_at?: string | null
+          user_id: string
+          weight?: number | null
+        }
+        Update: {
+          activity_level?: string | null
+          age?: number | null
+          created_at?: string | null
+          daily_calorie_target?: number | null
+          full_name?: string | null
+          goal?: string | null
+          height?: number | null
+          id?: string
+          updated_at?: string | null
+          user_id?: string
+          weight?: number | null
+        }
+        Relationships: []
+      }
+      water_intake: {
+        Row: {
+          created_at: string | null
+          glasses: number | null
+          id: string
+          intake_date: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          glasses?: number | null
+          id?: string
+          intake_date?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          glasses?: number | null
+          id?: string
+          intake_date?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
